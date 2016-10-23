@@ -71,8 +71,7 @@ readaline_and_out(FILE *fin, FILE *fout)
 {    
     int ch, count,k,q = 0; 
     char str[200] = { 0 };
-    
-
+   
     do {
         if ((ch = fgetc(fin)) == EOF) {
             if (!count)
