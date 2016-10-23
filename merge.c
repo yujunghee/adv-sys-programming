@@ -69,7 +69,9 @@ leave0:
 int
 readaline_and_out(FILE *fin, FILE *fout)
 {    
-    int ch, count = 0;
+    int ch, count,k,q = 0; 
+    char str[200] = { 0 };
+    
 
     do {
         if ((ch = fgetc(fin)) == EOF) {
@@ -80,9 +82,14 @@ readaline_and_out(FILE *fin, FILE *fout)
                 break;
             }
         }
-        fputc(ch, fout);
+       str[k] = ch;  
+        k++;  
         count++;
     } while (ch != 0x0a);
+    for (q = k; q >= 0; q--) 
+    { 
+        fputc(str[q], fout); 
+    }
     return 0;
 }
 
