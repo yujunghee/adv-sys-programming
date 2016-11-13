@@ -5,8 +5,7 @@
 
 int readaline_and_out(FILE *fin, FILE *fout);
 
-int
-main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     FILE *file1, *file2, *fout;
     int eof1 = 0, eof2 = 0;
